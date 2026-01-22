@@ -67,8 +67,14 @@ auto CVisual::OnRenderPlayerEsp( CCSPlayerController* pCCSPlayerController , con
 	if ( auto* pLocalPlayerController = GetCL_Players()->GetLocalPlayerController(); pLocalPlayerController )
 		IsEnemy = pCCSPlayerController->m_iTeamNum() != pLocalPlayerController->m_iTeamNum();
 
-	const ImVec2 min = { bBox.x, bBox.y };
-	const ImVec2 max = { bBox.w, bBox.h };
+	ImVec2 min = { bBox.x, bBox.y };
+	ImVec2 max = { bBox.w, bBox.h };
+
+	min.x = std::floorf( min.x );
+	min.y = std::floorf( min.y );
+
+	max.x = std::ceilf( max.x );
+	max.y = std::ceilf( max.y );
 
 	std::vector<std::string> PlayerItemIconList;
 
