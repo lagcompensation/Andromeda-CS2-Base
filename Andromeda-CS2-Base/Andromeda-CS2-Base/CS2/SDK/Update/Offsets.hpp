@@ -10,15 +10,15 @@ static constexpr auto g_ProtobufMsgOffset = 0x30;
 static constexpr auto g_CompositeMaterialOffset = 0x608;
 
 // 48 8D 58 ? 49 89 4B
-static constexpr auto g_CEconItemSchema_GetSortedItemDefinitionMap = 0x120;
+static constexpr auto g_CEconItemSchema_GetSortedItemDefinitionMap = 0x128;
 static constexpr auto g_CEconItemSchema_GetPaintKits = 0x2E8;
 
 // E8 ? ? ? ? 48 85 C0 74 ? 48 8B 40 ? 4C 8B C7
 /*
 00007FFB3AF2FE2B | movsxd r8,dword ptr ds:[rax+0x4]                |
-00007FFB3AF2FE2F | cmp r8d,dword ptr ds:[rbx+0x4D0]                | offset in function call
+00007FFB3AF2FE2F | cmp r8d,dword ptr ds:[rbx+0x4D8]                | offset in function call
 */
-static constexpr auto g_CEconItemSchema_GetMusicKitDefinitions = 0x4D0;
+static constexpr auto g_CEconItemSchema_GetMusicKitDefinitions = 0x4D8;
 
 // Client.dll
 /*
