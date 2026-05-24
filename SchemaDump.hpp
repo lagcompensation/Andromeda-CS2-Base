@@ -14895,127 +14895,127 @@ class CCSBot : public CBot // server
 	CountdownTimer m_alertTimer; // 0x01D0
 	CountdownTimer m_sneakTimer; // 0x01E8
 	CountdownTimer m_panicTimer; // 0x0200
-	float32 m_stateTimestamp; // 0x05A8
-	bool m_isAttacking; // 0x05AC
-	bool m_isOpeningDoor; // 0x05AD
-	CHandle< CBaseEntity > m_taskEntity; // 0x05B4
-	VectorWS m_goalPosition; // 0x05C4
-	CHandle< CBaseEntity > m_goalEntity; // 0x05D0
-	CHandle< CBaseEntity > m_avoid; // 0x05D4
-	float32 m_avoidTimestamp; // 0x05D8
-	bool m_isStopping; // 0x05DC
-	bool m_hasVisitedEnemySpawn; // 0x05DD
-	IntervalTimer m_stillTimer; // 0x05E0
-	bool m_bEyeAnglesUnderPathFinderControl; // 0x05F0
-	int32 m_pathIndex; // 0x4EF0
-	GameTime_t m_areaEnteredTimestamp; // 0x4EF4
-	CountdownTimer m_repathTimer; // 0x4EF8
-	CountdownTimer m_avoidFriendTimer; // 0x4F10
-	bool m_isFriendInTheWay; // 0x4F28
-	CountdownTimer m_politeTimer; // 0x4F30
-	bool m_isWaitingBehindFriend; // 0x4F48
-	float32 m_pathLadderEnd; // 0x4F74
-	CountdownTimer m_mustRunTimer; // 0x4FC0
-	CountdownTimer m_waitTimer; // 0x4FD8
-	CountdownTimer m_updateTravelDistanceTimer; // 0x4FF0
-	float32[64] m_playerTravelDistance; // 0x5008
-	uint8 m_travelDistancePhase; // 0x5108
-	uint8 m_hostageEscortCount; // 0x52A0
-	float32 m_hostageEscortCountTimestamp; // 0x52A4
-	int32 m_desiredTeam; // 0x52A8
-	bool m_hasJoined; // 0x52AC
-	bool m_isWaitingForHostage; // 0x52AD
-	CountdownTimer m_inhibitWaitingForHostageTimer; // 0x52B0
-	CountdownTimer m_waitForHostageTimer; // 0x52C8
-	Vector m_noisePosition; // 0x52E0
-	float32 m_noiseTravelDistance; // 0x52EC
-	float32 m_noiseTimestamp; // 0x52F0
-	CCSPlayerPawn* m_noiseSource; // 0x52F8
-	CountdownTimer m_noiseBendTimer; // 0x5310
-	Vector m_bentNoisePosition; // 0x5328
-	bool m_bendNoisePositionValid; // 0x5334
-	float32 m_lookAroundStateTimestamp; // 0x5338
-	float32 m_lookAheadAngle; // 0x533C
-	float32 m_lookUpAngle; // 0x5340
-	float32 m_forwardAngle; // 0x5344
-	float32 m_inhibitLookAroundTimestamp; // 0x5348
-	Vector m_lookAtSpot; // 0x5350
-	float32 m_lookAtSpotDuration; // 0x5360
-	float32 m_lookAtSpotTimestamp; // 0x5364
-	float32 m_lookAtSpotAngleTolerance; // 0x5368
-	bool m_lookAtSpotClearIfClose; // 0x536C
-	bool m_lookAtSpotAttack; // 0x536D
-	char* m_lookAtDesc; // 0x5370
-	float32 m_peripheralTimestamp; // 0x5378
-	uint8 m_approachPointCount; // 0x5500
-	Vector m_approachPointViewPosition; // 0x5504
-	IntervalTimer m_viewSteadyTimer; // 0x5510
-	CountdownTimer m_tossGrenadeTimer; // 0x5528
-	CountdownTimer m_isAvoidingGrenade; // 0x5548
-	float32 m_spotCheckTimestamp; // 0x5568
-	int32 m_checkedHidingSpotCount; // 0x5970
-	float32 m_lookPitch; // 0x5974
-	float32 m_lookPitchVel; // 0x5978
-	float32 m_lookYaw; // 0x597C
-	float32 m_lookYawVel; // 0x5980
-	Vector m_targetSpot; // 0x5984
-	Vector m_targetSpotVelocity; // 0x5990
-	Vector m_targetSpotPredicted; // 0x599C
-	QAngle m_aimError; // 0x59A8
-	QAngle m_aimGoal; // 0x59B4
-	GameTime_t m_targetSpotTime; // 0x59C0
-	float32 m_aimFocus; // 0x59C4
-	float32 m_aimFocusInterval; // 0x59C8
-	GameTime_t m_aimFocusNextUpdate; // 0x59CC
-	CountdownTimer m_ignoreEnemiesTimer; // 0x59D8
-	CHandle< CCSPlayerPawn > m_enemy; // 0x59F0
-	bool m_isEnemyVisible; // 0x59F4
-	uint8 m_visibleEnemyParts; // 0x59F5
-	Vector m_lastEnemyPosition; // 0x59F8
-	float32 m_lastSawEnemyTimestamp; // 0x5A04
-	float32 m_firstSawEnemyTimestamp; // 0x5A08
-	float32 m_currentEnemyAcquireTimestamp; // 0x5A0C
-	float32 m_enemyDeathTimestamp; // 0x5A10
-	float32 m_friendDeathTimestamp; // 0x5A14
-	bool m_isLastEnemyDead; // 0x5A18
-	int32 m_nearbyEnemyCount; // 0x5A1C
-	CHandle< CCSPlayerPawn > m_bomber; // 0x5C28
-	int32 m_nearbyFriendCount; // 0x5C2C
-	CHandle< CCSPlayerPawn > m_closestVisibleFriend; // 0x5C30
-	CHandle< CCSPlayerPawn > m_closestVisibleHumanFriend; // 0x5C34
-	IntervalTimer m_attentionInterval; // 0x5C38
-	CHandle< CCSPlayerPawn > m_attacker; // 0x5C48
-	float32 m_attackedTimestamp; // 0x5C4C
-	IntervalTimer m_burnedByFlamesTimer; // 0x5C50
-	int32 m_lastVictimID; // 0x5C60
-	bool m_isAimingAtEnemy; // 0x5C64
-	bool m_isRapidFiring; // 0x5C65
-	IntervalTimer m_equipTimer; // 0x5C68
-	CountdownTimer m_zoomTimer; // 0x5C78
-	GameTime_t m_fireWeaponTimestamp; // 0x5C90
-	CountdownTimer m_lookForWeaponsOnGroundTimer; // 0x5C98
-	bool m_bIsSleeping; // 0x5CB0
-	bool m_isEnemySniperVisible; // 0x5CB1
-	CountdownTimer m_sawEnemySniperTimer; // 0x5CB8
-	uint8 m_enemyQueueIndex; // 0x5D70
-	uint8 m_enemyQueueCount; // 0x5D71
-	uint8 m_enemyQueueAttendIndex; // 0x5D72
-	bool m_isStuck; // 0x5D73
-	GameTime_t m_stuckTimestamp; // 0x5D74
-	Vector m_stuckSpot; // 0x5D78
-	CountdownTimer m_wiggleTimer; // 0x5D88
-	CountdownTimer m_stuckJumpTimer; // 0x5DA0
-	GameTime_t m_nextCleanupCheckTimestamp; // 0x5DB8
-	float32[10] m_avgVel; // 0x5DBC
-	int32 m_avgVelIndex; // 0x5DE4
-	int32 m_avgVelCount; // 0x5DE8
-	Vector m_lastOrigin; // 0x5DEC
-	float32 m_lastRadioRecievedTimestamp; // 0x5DFC
-	float32 m_lastRadioSentTimestamp; // 0x5E00
-	CHandle< CCSPlayerPawn > m_radioSubject; // 0x5E04
-	Vector m_radioPosition; // 0x5E08
-	float32 m_voiceEndTimestamp; // 0x5E14
-	int32 m_lastValidReactionQueueFrame; // 0x5E20
+	float32 m_stateTimestamp; // 0x05C8
+	bool m_isAttacking; // 0x05CC
+	bool m_isOpeningDoor; // 0x05CD
+	CHandle< CBaseEntity > m_taskEntity; // 0x05D4
+	VectorWS m_goalPosition; // 0x05E4
+	CHandle< CBaseEntity > m_goalEntity; // 0x05F0
+	CHandle< CBaseEntity > m_avoid; // 0x05F4
+	float32 m_avoidTimestamp; // 0x05F8
+	bool m_isStopping; // 0x05FC
+	bool m_hasVisitedEnemySpawn; // 0x05FD
+	IntervalTimer m_stillTimer; // 0x0600
+	bool m_bEyeAnglesUnderPathFinderControl; // 0x0610
+	int32 m_pathIndex; // 0x4F10
+	GameTime_t m_areaEnteredTimestamp; // 0x4F14
+	CountdownTimer m_repathTimer; // 0x4F18
+	CountdownTimer m_avoidFriendTimer; // 0x4F30
+	bool m_isFriendInTheWay; // 0x4F48
+	CountdownTimer m_politeTimer; // 0x4F50
+	bool m_isWaitingBehindFriend; // 0x4F68
+	float32 m_pathLadderEnd; // 0x4F94
+	CountdownTimer m_mustRunTimer; // 0x4FE0
+	CountdownTimer m_waitTimer; // 0x4FF8
+	CountdownTimer m_updateTravelDistanceTimer; // 0x5010
+	float32[64] m_playerTravelDistance; // 0x5028
+	uint8 m_travelDistancePhase; // 0x5128
+	uint8 m_hostageEscortCount; // 0x52C0
+	float32 m_hostageEscortCountTimestamp; // 0x52C4
+	int32 m_desiredTeam; // 0x52C8
+	bool m_hasJoined; // 0x52CC
+	bool m_isWaitingForHostage; // 0x52CD
+	CountdownTimer m_inhibitWaitingForHostageTimer; // 0x52D0
+	CountdownTimer m_waitForHostageTimer; // 0x52E8
+	Vector m_noisePosition; // 0x5300
+	float32 m_noiseTravelDistance; // 0x530C
+	float32 m_noiseTimestamp; // 0x5310
+	CCSPlayerPawn* m_noiseSource; // 0x5318
+	CountdownTimer m_noiseBendTimer; // 0x5330
+	Vector m_bentNoisePosition; // 0x5348
+	bool m_bendNoisePositionValid; // 0x5354
+	float32 m_lookAroundStateTimestamp; // 0x5358
+	float32 m_lookAheadAngle; // 0x535C
+	float32 m_lookUpAngle; // 0x5360
+	float32 m_forwardAngle; // 0x5364
+	float32 m_inhibitLookAroundTimestamp; // 0x5368
+	Vector m_lookAtSpot; // 0x5370
+	float32 m_lookAtSpotDuration; // 0x5380
+	float32 m_lookAtSpotTimestamp; // 0x5384
+	float32 m_lookAtSpotAngleTolerance; // 0x5388
+	bool m_lookAtSpotClearIfClose; // 0x538C
+	bool m_lookAtSpotAttack; // 0x538D
+	char* m_lookAtDesc; // 0x5390
+	float32 m_peripheralTimestamp; // 0x5398
+	uint8 m_approachPointCount; // 0x5520
+	Vector m_approachPointViewPosition; // 0x5524
+	IntervalTimer m_viewSteadyTimer; // 0x5530
+	CountdownTimer m_tossGrenadeTimer; // 0x5548
+	CountdownTimer m_isAvoidingGrenade; // 0x5568
+	float32 m_spotCheckTimestamp; // 0x5588
+	int32 m_checkedHidingSpotCount; // 0x5990
+	float32 m_lookPitch; // 0x5994
+	float32 m_lookPitchVel; // 0x5998
+	float32 m_lookYaw; // 0x599C
+	float32 m_lookYawVel; // 0x59A0
+	Vector m_targetSpot; // 0x59A4
+	Vector m_targetSpotVelocity; // 0x59B0
+	Vector m_targetSpotPredicted; // 0x59BC
+	QAngle m_aimError; // 0x59C8
+	QAngle m_aimGoal; // 0x59D4
+	GameTime_t m_targetSpotTime; // 0x59E0
+	float32 m_aimFocus; // 0x59E4
+	float32 m_aimFocusInterval; // 0x59E8
+	GameTime_t m_aimFocusNextUpdate; // 0x59EC
+	CountdownTimer m_ignoreEnemiesTimer; // 0x59F8
+	CHandle< CCSPlayerPawn > m_enemy; // 0x5A10
+	bool m_isEnemyVisible; // 0x5A14
+	uint8 m_visibleEnemyParts; // 0x5A15
+	Vector m_lastEnemyPosition; // 0x5A18
+	float32 m_lastSawEnemyTimestamp; // 0x5A24
+	float32 m_firstSawEnemyTimestamp; // 0x5A28
+	float32 m_currentEnemyAcquireTimestamp; // 0x5A2C
+	float32 m_enemyDeathTimestamp; // 0x5A30
+	float32 m_friendDeathTimestamp; // 0x5A34
+	bool m_isLastEnemyDead; // 0x5A38
+	int32 m_nearbyEnemyCount; // 0x5A3C
+	CHandle< CCSPlayerPawn > m_bomber; // 0x5C48
+	int32 m_nearbyFriendCount; // 0x5C4C
+	CHandle< CCSPlayerPawn > m_closestVisibleFriend; // 0x5C50
+	CHandle< CCSPlayerPawn > m_closestVisibleHumanFriend; // 0x5C54
+	IntervalTimer m_attentionInterval; // 0x5C58
+	CHandle< CCSPlayerPawn > m_attacker; // 0x5C68
+	float32 m_attackedTimestamp; // 0x5C6C
+	IntervalTimer m_burnedByFlamesTimer; // 0x5C70
+	int32 m_lastVictimID; // 0x5C80
+	bool m_isAimingAtEnemy; // 0x5C84
+	bool m_isRapidFiring; // 0x5C85
+	IntervalTimer m_equipTimer; // 0x5C88
+	CountdownTimer m_zoomTimer; // 0x5C98
+	GameTime_t m_fireWeaponTimestamp; // 0x5CB0
+	CountdownTimer m_lookForWeaponsOnGroundTimer; // 0x5CB8
+	bool m_bIsSleeping; // 0x5CD0
+	bool m_isEnemySniperVisible; // 0x5CD1
+	CountdownTimer m_sawEnemySniperTimer; // 0x5CD8
+	uint8 m_enemyQueueIndex; // 0x5D90
+	uint8 m_enemyQueueCount; // 0x5D91
+	uint8 m_enemyQueueAttendIndex; // 0x5D92
+	bool m_isStuck; // 0x5D93
+	GameTime_t m_stuckTimestamp; // 0x5D94
+	Vector m_stuckSpot; // 0x5D98
+	CountdownTimer m_wiggleTimer; // 0x5DA8
+	CountdownTimer m_stuckJumpTimer; // 0x5DC0
+	GameTime_t m_nextCleanupCheckTimestamp; // 0x5DD8
+	float32[10] m_avgVel; // 0x5DDC
+	int32 m_avgVelIndex; // 0x5E04
+	int32 m_avgVelCount; // 0x5E08
+	Vector m_lastOrigin; // 0x5E0C
+	float32 m_lastRadioRecievedTimestamp; // 0x5E1C
+	float32 m_lastRadioSentTimestamp; // 0x5E20
+	CHandle< CCSPlayerPawn > m_radioSubject; // 0x5E24
+	Vector m_radioPosition; // 0x5E28
+	float32 m_voiceEndTimestamp; // 0x5E34
+	int32 m_lastValidReactionQueueFrame; // 0x5E40
 };
 class CHandleTest : public CBaseEntity // server
 {
@@ -16376,15 +16376,12 @@ class CCSPlayerPawn : public CCSPlayerPawnBase // server
 	QAngle m_angStashedShootAngles; // 0x1300
 	Vector m_vecStashedGrenadeThrowPosition; // 0x130C
 	Vector m_vecStashedVelocity; // 0x1318
-	QAngle[2] m_angShootAngleHistory; // 0x1324
-	Vector[2] m_vecThrowPositionHistory; // 0x133C
-	Vector[2] m_vecVelocityHistory; // 0x1354
-	bool m_bCommittingSuicideOnTeamChange; // 0x1378
-	bool m_wasNotKilledNaturally; // 0x1379
-	GameTime_t m_fImmuneToGunGameDamageTime; // 0x137C
-	bool m_bGunGameImmunity; // 0x1380
-	float32 m_fMolotovDamageTime; // 0x1384
-	QAngle m_angEyeAngles; // 0x1388
+	bool m_bCommittingSuicideOnTeamChange; // 0x1330
+	bool m_wasNotKilledNaturally; // 0x1331
+	GameTime_t m_fImmuneToGunGameDamageTime; // 0x1334
+	bool m_bGunGameImmunity; // 0x1338
+	float32 m_fMolotovDamageTime; // 0x133C
+	QAngle m_angEyeAngles; // 0x1340
 };
 class CEnvLightProbeVolume : public CBaseEntity // server
 {
@@ -22135,7 +22132,7 @@ class C_BaseButton : public C_BaseToggle // client
 };
 class CCSObserver_ObserverServices : public CPlayer_ObserverServices // client
 {
-	ObserverInterpState_t m_obsInterpState; // 0x0064
+	ObserverInterpState_t m_obsInterpState; // 0x0068
 };
 class CHitboxComponent : public CEntityComponent // client
 {
@@ -22702,16 +22699,17 @@ class C_CSWeaponBase : public C_BasePlayerWeapon // client
 	bool m_bVisualsDataSet; // 0x18B9
 	bool m_bUIWeapon; // 0x18BA
 	int32 m_nCustomEconReloadEventId; // 0x18BC
-	GameTime_t m_nextPrevOwnerUseTime; // 0x18C8
-	CHandle< C_CSPlayerPawn > m_hPrevOwner; // 0x18CC
-	GameTick_t m_nDropTick; // 0x18D0
-	bool m_bWasActiveWeaponWhenDropped; // 0x18D4
-	bool m_donated; // 0x18F4
-	GameTime_t m_fLastShotTime; // 0x18F8
-	bool m_bWasOwnedByCT; // 0x18FC
-	bool m_bWasOwnedByTerrorist; // 0x18FD
-	float32 m_flNextClientFireBulletTime; // 0x1900
-	float32 m_flNextClientFireBulletTime_Repredict; // 0x1904
+	bool m_bCanBePickedUp; // 0x18C8
+	GameTime_t m_nextPrevOwnerUseTime; // 0x18CC
+	CHandle< C_CSPlayerPawn > m_hPrevOwner; // 0x18D0
+	GameTick_t m_nDropTick; // 0x18D4
+	bool m_bWasActiveWeaponWhenDropped; // 0x18D8
+	bool m_donated; // 0x18FC
+	GameTime_t m_fLastShotTime; // 0x1900
+	bool m_bWasOwnedByCT; // 0x1904
+	bool m_bWasOwnedByTerrorist; // 0x1905
+	float32 m_flNextClientFireBulletTime; // 0x1908
+	float32 m_flNextClientFireBulletTime_Repredict; // 0x190C
 	C_IronSightController m_IronSightController; // 0x1960
 	int32 m_iIronSightMode; // 0x1A10
 	GameTime_t m_flLastLOSTraceFailureTime; // 0x1A88
@@ -23005,24 +23003,21 @@ class C_CSPlayerPawn : public C_CSPlayerPawnBase // client
 	QAngle m_angStashedShootAngles; // 0x1CD8
 	Vector m_vecStashedGrenadeThrowPosition; // 0x1CE4
 	Vector m_vecStashedVelocity; // 0x1CF0
-	QAngle[2] m_angShootAngleHistory; // 0x1CFC
-	Vector[2] m_vecThrowPositionHistory; // 0x1D14
-	Vector[2] m_vecVelocityHistory; // 0x1D2C
-	bool m_bShouldAutobuyDMWeapons; // 0x3280
-	GameTime_t m_fImmuneToGunGameDamageTime; // 0x3284
-	bool m_bGunGameImmunity; // 0x3288
-	GameTime_t m_fImmuneToGunGameDamageTimeLast; // 0x328C
-	float32 m_fMolotovDamageTime; // 0x3290
-	ParticleIndex_t m_nPlayerInfernoBodyFx; // 0x32FC
-	QAngle m_angEyeAngles; // 0x3370
-	GameTime_t[4] m_arrOldEyeAnglesTimes; // 0x3400
-	QAngle[4] m_arrOldEyeAngles; // 0x3410
-	QAngle m_angEyeAnglesVelocity; // 0x3440
-	CEntityIndex m_iIDEntIndex; // 0x344C
-	CountdownTimer m_delayTargetIDTimer; // 0x3450
-	CEntityIndex m_iTargetItemEntIdx; // 0x3468
-	CEntityIndex m_iOldIDEntIndex; // 0x346C
-	CountdownTimer m_holdTargetIDTimer; // 0x3470
+	bool m_bShouldAutobuyDMWeapons; // 0x3230
+	GameTime_t m_fImmuneToGunGameDamageTime; // 0x3234
+	bool m_bGunGameImmunity; // 0x3238
+	GameTime_t m_fImmuneToGunGameDamageTimeLast; // 0x323C
+	float32 m_fMolotovDamageTime; // 0x3240
+	ParticleIndex_t m_nPlayerInfernoBodyFx; // 0x32AC
+	QAngle m_angEyeAngles; // 0x3320
+	GameTime_t[4] m_arrOldEyeAnglesTimes; // 0x33B0
+	QAngle[4] m_arrOldEyeAngles; // 0x33C0
+	QAngle m_angEyeAnglesVelocity; // 0x33F0
+	CEntityIndex m_iIDEntIndex; // 0x33FC
+	CountdownTimer m_delayTargetIDTimer; // 0x3400
+	CEntityIndex m_iTargetItemEntIdx; // 0x3418
+	CEntityIndex m_iOldIDEntIndex; // 0x341C
+	CountdownTimer m_holdTargetIDTimer; // 0x3420
 };
 class C_CSGO_TeamIntroTerroristPosition : public C_CSGO_TeamIntroCharacterPosition // client
 {
@@ -23650,6 +23645,7 @@ class C_StattrakModule : public C_CS2WeaponModuleBase // client
 };
 class CCSObserver_CameraServices : public CCSPlayerBase_CameraServices // client
 {
+	CHandle< C_PostProcessingVolume > m_hPrevPostProcessingVolume; // 0x02A8
 };
 class CEnvSoundscapeProxy : public CEnvSoundscape // client
 {
@@ -25362,8 +25358,8 @@ class C_ModelPointEntity : public C_BaseModelEntity // client
 };
 class C_CSGO_PreviewPlayer : public C_CSPlayerPawn // client
 {
-	CGlobalSymbol m_animgraphCharacterModeString; // 0x3490
-	float32 m_flInitialModelScale; // 0x3498
+	CGlobalSymbol m_animgraphCharacterModeString; // 0x3440
+	float32 m_flInitialModelScale; // 0x3448
 };
 class C_RectLight : public C_BarnLight // client
 {
